@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/28db86a692.js" crossorigin="anonymous"></script>
     <link rel="icon" href="club-img/favicon (2).ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <title>ROYAL BROTHERS SNOOKER AND POOL CLUB</title>
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -15,50 +21,53 @@
             <img class="rb-name" src="club-img\rb-logo-name.jpg">
         </div>
         <div class="nav-contact">
-           <a href="https://www.instagram.com/p/Cr_m8skIg1B/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">Contact Us <i class='fas fa-phone'></i></a>
-        </div> 
+            <a href="https://www.instagram.com/p/Cr_m8skIg1B/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="> <i
+                    class='fas fa-phone'></i> Contact Us</a>
+        </div>
     </nav>
     <div class="video-container">
-        <video autoplay loop muted width="100%" height="100%" controls >
-          <source src="club-img\video-3.mp4" type="video/mp4">
+        <video id="video" autoplay loop muted style="min-height:100%;min-width:100%;object-fit: cover;">
+            <source src="club-img\video-3.mp4" type="video/mp4">
         </video>
         <div class="text-container">
             <div class="video-text">
                 <div class="video-texth3">
-                    <h3>ROYAL </h3><h3 class="h3-color">  BROTHERS </h3>
+                    <h3>ROYAL </h3>
+                    <h3 class="h3-color"> BROTHERS </h3>
                 </div>
-                 <h5>SNOOKER AND POOL CLUB</h5>
-                 <p>"There's nothing quite like the thrill of hitting <br>
-                   that perfect shot in a game of snooker..🎯🔥<br>
-                   Aim, shoot, score!"
-                 </p>
+                <h5>SNOOKER AND POOL CLUB</h5>
+                <p style="font-family:'Poppins', sans-serif;font-weight:700;">"There's nothing quite like the thrill of
+                    hitting that perfect shot in a game of snooker..🎯🔥<br>
+                    Aim, shoot, score!"
+                </p>
                 <div class="watch-btn">
-                    <a href="https://www.instagram.com/reel/Csv6hBAgRUq/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
-                       Watch  <i style='font-size:24px' class='fas'>&#xf87c;</i>
+                    <a
+                        href="https://www.instagram.com/reel/Csv6hBAgRUq/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
+                        <i style='font-size:24px' class='fas'>&#xf87c;</i> Watch
                     </a>
                 </div>
             </div>
         </div>
     </div>
     <div class="info">
-       <div class="location">
-          <div class="location-logo">
-            <a href="https://maps.app.goo.gl/x8ZRHX5UFLUAQriS8"><i class='fas'>&#xf3c5;</i></a>
-          </div>
-          <div>
-            <h3 style="font-size: 1.5rem">Location</h3>
-            <p>Behind De-Smoke, Akurdi Railway Station 411033</p>
-          </div>         
-       </div>
-       <div class="time">
-        <div class="time-logo">
-            <a href="#"><i  class="fa">&#xf017;</i></a>
-           </div>
-           <div>
-            <h3 style="font-size: 1.5rem">Open-Hour</h3>
-            <p>Everyday, 12.00 To 24.00</p>
-           </div>
-       </div>
+        <div class="location">
+            <div class="location-logo">
+                <a href="https://maps.app.goo.gl/x8ZRHX5UFLUAQriS8"><i class='fas'>&#xf3c5;</i></a>
+            </div>
+            <div>
+                <h3 style="font-size: 1.5rem">Location</h3>
+                <p>Behind De-Smoke, Akurdi Railway Station 411033</p>
+            </div>
+        </div>
+        <div class="time">
+            <div class="time-logo">
+                <a href="#"><i class="fa">&#xf017;</i></a>
+            </div>
+            <div>
+                <h3 style="font-size: 1.5rem">Open-Hour</h3>
+                <p>Everyday, 12.00 To 24.00</p>
+            </div>
+        </div>
     </div>
     <div class="service-container">
         <div class="service-text">
@@ -66,19 +75,19 @@
         </div>
         <div class="services-info">
             <div class="table">
-               <img src="club-img/IMG-10.jpg">
-               <div class="table-info">
-                  <h3>Table-Rental</h3>
-                  <a href="priceinfo.html">Read-More</a>
-               </div>
+                <img src="club-img/IMG-10.jpg">
+                <div class="table-info">
+                    <h3>Table-Rental</h3>
+                    <a id="read-more-btn" href="priceinfo.html">Read-More</a>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <div class="gallery">
         <div class="gallery-info">
-           <h3>-Our Gallary-</h3>
-           <h4>Drop in today for a premium experience!</h4>
+            <h3>-Our Gallary-</h3>
+            <h4>Drop in today for a premium experience!</h4>
         </div>
         <div>
             <div class="full-img" id="fullImgBox">
@@ -86,65 +95,66 @@
                 <span onclick="closeFullImg()">X</span>
             </div>
             <div class="img-gallery">
-               <img src="club-img\IMG-1.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-2.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-3.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-4.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-5.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-6.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-7.jpg" onclick="openFullImg(this.src)">
-               <img src="club-img\IMG-8.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-1.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-2.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-3.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-4.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-5.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-6.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-7.jpg" onclick="openFullImg(this.src)">
+                <img src="club-img\IMG-8.jpg" onclick="openFullImg(this.src)">
             </div>
         </div>
     </div>
-        <div class="about-us">
-              <div class="about-us-info">
-                <h3>-About Us-</h3>
-                <h4>A game that rewards the patient and punishes the impetuous."</h4>
-             </div>
-              
-             <div class="container">
+    <div class="about-us">
+        <div class="about-us-info">
+            <h3>-About Us-</h3>
+            <h4>A game that rewards the patient and punishes the impetuous."</h4>
+        </div>
 
-                   <div class="first">
-                     <img src="club-img\IMG-11.jpg" onclick="openFullImg(this.src)">
-                   </div>
+        <div class="container">
 
-                <div class="second">
-                    <h4>Service Speciality</h4>
-                    <ul>
-                        <li>100% Satisfaction Guarantee</li>
-                        <li>Affordable Pricing</li>
-                        <li>well maintained Equipment</li>
-                        <li>Cozy Ambiance </li>
-                        <li>Proper Ventilation</li>
-                        <li>Super friendly staff</li>
-                        <li>Cafe service</li>
-                    </ul>
-                
-                    <div class="owner">
-                        <div class="profile">
-                            <a href="https://www.instagram.com/its_prathm_9897/#"><img src="club-img\Profileimg.jpg" ></a>
-                        </div>
-                        <div class="owner-info">
-                            <h5>Prathmesh Patil</h5>
-                            <h6>Owner</h6>
-                        </div>
+            <div class="first">
+                <img src="club-img\IMG-11.jpg" onclick="openFullImg(this.src)">
+            </div>
+
+            <div class="second">
+                <h4>Service Speciality</h4>
+                <ul>
+                    <li>100% Satisfaction Guarantee</li>
+                    <li>Affordable Pricing</li>
+                    <li>well maintained Equipment</li>
+                    <li>Cozy Ambiance </li>
+                    <li>Proper Ventilation</li>
+                    <li>Super friendly staff</li>
+                    <li>Cafe service</li>
+                </ul>
+
+                <div class="owner">
+                    <div class="profile">
+                        <a href="https://www.instagram.com/its_prathm_9897/#"><img src="club-img\Profileimg.jpg"></a>
+                    </div>
+                    <div class="owner-info">
+                        <h5>Prathmesh Patil</h5>
+                        <h6>Owner</h6>
                     </div>
                 </div>
-              
-             </div>
+            </div>
+
         </div>
-        <div class="thx">
-            <h3>THANK YOU FOR VISIT...!!!</h3>
-        </div>
-        
-        <footer>
-            <hr>
-            <a href="https://www.instagram.com/royal_brothers_snooker_pool_/#">Instragram</a>
-            <a href="#">Contact</a>
-            <a href="#">Terms And Condition</a>
-            <h5>Copyright @2023 All Right Reserved</h5>
-        </footer>
+    </div>
+    <div class="thx">
+        <h3>THANK YOU FOR VISIT...!!!</h3>
+    </div>
+
+    <footer>
+        <hr>
+        <a href="https://www.instagram.com/royal_brothers_snooker_pool_/#">Instragram</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms And Condition</a>
+        <h5>Copyright @2023 All Right Reserved</h5>
+    </footer>
     <script src="index.js"></script>
 </body>
+
 </html>
