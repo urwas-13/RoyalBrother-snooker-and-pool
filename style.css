@@ -1,9 +1,179 @@
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------------------video Media Query---------------------------------------------------------- */
+
+
+/* Media query for tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .text-container {
+    top: 60%; /* Adjust position for smaller screens */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-text h3 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .video-text h5 {
+    font-size: 1.2rem; /* Adjust subheading */
+  }
+
+  .video-text p {
+    font-size: 0.9rem; /* Make paragraph text smaller */
+    padding: 0 15px; /* Add some padding for better alignment */
+  }
+
+  .watch-btn a {
+    font-size: 0.9rem;
+    padding: 8px 15px; /* Adjust button size */
+  }
+}
+
+/* Media query for very small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .text-container {
+    top: 65%; /* Slightly lower for better view */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10px; /* Add some horizontal padding */
+  }
+
+  .video-text h3 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .video-text h5 {
+    font-size: 1rem; /* Adjust for smaller screens */
+  }
+
+  .video-text p {
+    font-size: 0.8rem; /* Smaller text for mobile */
+    line-height: 1.2; /* Tighter line spacing */
+  }
+
+  .watch-btn a {
+    font-size: 0.8rem;
+    padding: 6px 10px; /* Smaller button */
+  }
+}
+
+/* Media query for large desktop screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .text-container {
+    top: 50%; /* Keep centered */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-text h3 {
+    font-size: 4rem; /* Larger headings for big screens */
+  }
+
+  .video-text h5 {
+    font-size: 2rem;
+  }
+
+  .video-text p {
+    font-size: 1.2rem;
+  }
+
+  .watch-btn a {
+    font-size: 1.2rem;
+    padding: 15px 30px; /* Bigger buttons for larger screens */
+  }
+}
+
+
+
+/* ----------------------------------------------------------------About Us Media Query---------------------------------------------------------- */
+
+
+/* Media query for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align content */
+  }
+
+  .contimg {
+    width: 300px; /* Adjust image size */
+    height: 300px;
+    margin: 20px auto; /* Center the image */
+  }
+
+  .second h4 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  .second ul {
+    font-size: 1.2rem; /* Adjust text size */
+    padding-left: 20px;
+  }
+}
+
+/* Media query for small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Ensure vertical layout */
+    text-align: center;
+  }
+
+  .contimg {
+    width: 250px; /* Smaller image */
+    height: 250px;
+    margin: 15px auto; /* Center the image */
+  }
+
+  .second h4 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .second ul {
+    font-size: 1rem; /* Smaller text */
+    padding-left: 10px;
+  }
+
+  .second li {
+    padding: 5px; /* Reduce padding */
+  }
+}
+
+/* Media query for large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    justify-content: space-around; /* Add more spacing on large screens */
+  }
+
+  .contimg {
+    width: 400px; /* Larger image */
+    height: 400px;
+  }
+
+  .second h4 {
+    font-size: 2.5rem; /* Larger heading size */
+  }
+
+  .second ul {
+    font-size: 1.8rem; /* Larger text size */
+  }
+}
+
+
+/* -------------------------------------------------------------CSS code start here---------------------------------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
   font-family: "poppins", sans-serif;
   box-sizing: border-box;
 }
+
+/* ----------------------------------------------------------------Nav Bar------------------------------------------------------------ */
 
 nav {
   width: 100%;
@@ -35,78 +205,87 @@ nav {
   border: 1px solid black;
   border-radius: 30px;
 }
+ 
+/* ----------------------------------------------------------------Video container------------------------------------------------------------ */
 
-#video {
-  filter: blur(0px);
-  /* blur can be adjusted  */
-  max-height: 90vh;
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
   overflow: hidden;
 }
 
-.text-container {
-  margin-left: 100px;
+#video {
   position: absolute;
-  top: 300px;
+  top: 0;
   left: 0;
-  background: none;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Background layer */
 }
 
-.video-texth3 {
-  display: flex;
-}
-
-.text-container h5 {
-  font-weight: 800;
-}
-.video-texth3 h3 {
-  font-weight: bolder;
-  font-family: sans-serif;
-}
-
-.h3-color {
-  color: #a11026;
-}
-
-.watch-btn {
-  margin-top: 30px;
-  margin-left: 0;
-}
-
-.watch-btn a {
-  padding: 10px 25px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  border-radius: 30px;
-  text-decoration: none;
-  border: 4px solid white;
-  background-color: #a11026;
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  text-align: center;
+  z-index: 2; /* Above video */
 }
 
 .video-text h3 {
-  font-size: 5rem;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 800;
+}
+
+.h3-color {
+  color: rgb(228, 10, 10); /* Gold color */
 }
 
 .video-text h5 {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
+
+.video-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.watch-btn a {
+  display: inline-block;
+  background-color: #843a45; /* Gold button */
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.watch-btn a:hover {
+  background-color: #ffae00; /* Darker gold */
+  color: white;
+}
+
 
 .info {
   padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center; */
+  justify-content: space-evenly;
 }
 
 .location {
   padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .location-logo {
@@ -122,14 +301,15 @@ nav {
 .time {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
+
+/* ----------------------------------------------------------------service container------------------------------------------------------------ */
 
 .service-container {
   max-width: 100vw;
   margin: 40px 0px;
   overflow: hidden;
-
 }
 
 .service-text {
@@ -140,10 +320,10 @@ nav {
   color: #601a25;
   text-decoration: underline;
 }
+
 .service-text h3{
     text-align: center;
 }
-
 
 .services-info {
   width: fit-content;
@@ -207,6 +387,8 @@ nav {
     background-color: #c78f15;
   }
 }
+
+/* ---------------------------------------------------------------- Gallery start here------------------------------------------------------------ */
 
 .gallery-info h3,
 .about-us-info h3 {
@@ -276,21 +458,24 @@ nav {
   cursor: pointer;
 }
 
+/* ----------------------------------------------------------------About Us------------------------------------------------------------ */
+
 .container {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
 }
 
-.first img {
-  width: 550px;
-  height: 550px;
+.contimg {
+  width: 350px;
+  height: 350px;
   margin: 50px;
+  margin-top: 100px;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 
-.first img:hover {
+.contimg:hover {
   transform: scale(1.2);
   border-radius: 20px;
   box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
@@ -316,11 +501,12 @@ nav {
 .second li {
   padding: 10px;
 }
+
 .owner {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-top: 100px;
+  /* margin-top: 50px; */
 }
 
 .profile {
@@ -349,15 +535,19 @@ nav {
 
 .thx {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+ 
 }
 
 .thx h3 {
+  margin-top: 20px;
   font-size: 2rem;
   -webkit-text-stroke-color: 1px #601a25;
   text-shadow: 0 11px 14px #601a25;
   color: #c11730;
 }
+
+/* ----------------------------------------------------------------Footer------------------------------------------------------------ */
 
 footer {
   text-align: center;
